@@ -2,8 +2,8 @@ extends Node # instancia a classe Node2D
 
 var status = 1
 var vscore = 0
-var x = 1.5 
-var y = 1.5 
+var x = 4 #muda a velocidade horizontal
+var y = 4 #muda a velocidade vertical
 
 # executa essa função ao carregar o jogo
 func _ready():
@@ -17,7 +17,7 @@ func _process(delta):
 	if status == 1: # jogando
 		
 		# movimenta o cenário do fundo
-		$background.position.x -= 1*x*4 #mudando a velocidade do background
+		$background.position.x -= 1*x
 		if ($background.position.x) < -200:
 			$background.position.x = 600
 			
