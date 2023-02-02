@@ -17,7 +17,7 @@ func _process(delta):
 	if status == 1: # jogando
 		
 		# movimenta o cenário do fundo
-		$background.position.x -= 1*x
+		$background.position.x -= 1*x*4 #mudando a velocidade do background
 		if ($background.position.x) < -200:
 			$background.position.x = 600
 			
