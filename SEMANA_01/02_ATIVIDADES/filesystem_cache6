@@ -1,0 +1,16 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1676380271
+default_env.tres::Environment::1675347302::0::1::::<><>::
+Futura Extra Bold.ttf::DynamicFontData::1675338372::0::1::::<><>::
+Main.gd::GDScript::1675347124::0::1::::<>Node<>::
+Main.tscn::PackedScene::1675347302::0::1::::<><>::res://img/background.png<>res://img/inteli.png<>res://Main.gd<>res://img/column2.png<>res://img/column1.png<>res://img/dragon1.png<>res://img/dragon2.png<>res://img/dragon3.png<>res://img/gameover.png<>res://Futura Extra Bold.ttf
+::res://img/::1675338372
+abertura.png::StreamTexture::1675338372::1675338372::1::::<><>::
+background.png::StreamTexture::1675338372::1675338372::1::::<><>::
+column1.png::StreamTexture::1675338372::1675338372::1::::<><>::
+column2.png::StreamTexture::1675338372::1675338372::1::::<><>::
+dragon1.png::StreamTexture::1675338372::1675338372::1::::<><>::
+dragon2.png::StreamTexture::1675338372::1675338372::1::::<><>::
+dragon3.png::StreamTexture::1675338372::1675338372::1::::<><>::
+gameover.png::StreamTexture::1675338372::1675338372::1::::<><>::
+inteli.png::StreamTexture::1675338372::1675338372::1::::<><>::
