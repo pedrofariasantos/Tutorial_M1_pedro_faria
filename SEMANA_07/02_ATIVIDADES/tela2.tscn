@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://AndandoD.png" type="Texture" id=1]
+[ext_resource path="res://mapa ponderada 2.png" type="Texture" id=2]
+[ext_resource path="res://personagem.gd" type="Script" id=3]
+[ext_resource path="res://casa projeto.png" type="Texture" id=4]
+[ext_resource path="res://tela2.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 119.004
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 55.0
+height = 0.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -3, 14 )
+script = ExtResource( 5 )
+
+[node name="Tela2Godot" type="Sprite" parent="."]
+position = Vector2( 773, 391 )
+scale = Vector2( 1.94228, 1.40621 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 7.00006, -8.99997 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 201, 71 )
+scale = Vector2( 0.421245, 0.40137 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 188, 72 )
+shape = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 0, 33 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AndandoD" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 217, 393 )
+scale = Vector2( 8.28125, 4.8125 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 225, 400 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 419.0
+margin_right = 933.0
+margin_bottom = 310.0
+rect_scale = Vector2( 3, 3 )
+text = "Você esqueceu seu equipamento de caça
+Volte para sua casa e busque ele, você tem trinta segundos
+Caso não consiga irá morrer de fome.
+Lembre-se somente pegue os objetos de caça!!"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 7, -9 )
+polygon = PoolVector2Array( -7, 3, -3, 801, -27, 801, -37, 5 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 0, 795 )
+polygon = PoolVector2Array( -1, -13, -1, -5, 1535, -3, 1525, -24 )
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]

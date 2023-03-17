@@ -1,0 +1,142 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://mapa ponderada.png" type="Texture" id=1]
+[ext_resource path="res://personagemtela3.gd" type="Script" id=2]
+[ext_resource path="res://AndandoD.png" type="Texture" id=3]
+[ext_resource path="res://tela3.gd" type="Script" id=4]
+[ext_resource path="res://arma2 ponderada.png" type="Texture" id=5]
+[ext_resource path="res://arma ponderada.png" type="Texture" id=6]
+[ext_resource path="res://cone ponderada.png" type="Texture" id=7]
+[ext_resource path="res://faca ponderada.png" type="Texture" id=8]
+[ext_resource path="res://flor ponderada.jpg" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41.2775, 24.3737 )
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 0.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 136.371, 92.2208 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 151.072, 88.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 101.5, 22 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 80.5, 52.5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 783.257, 415.598 )
+scale = Vector2( 1.62863, 1.28563 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 755, 424 )
+scale = Vector2( 1.5626, 1.31289 )
+
+[node name="arma" type="Sprite" parent="Area2D"]
+position = Vector2( -375.017, -244.499 )
+scale = Vector2( 0.281687, 0.295564 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -375.017, -244.499 )
+shape = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 931.75, 526.375 )
+scale = Vector2( 6.52289, 5.84887 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( -65.4235, 25.0689 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -65.4235, 25.0689 )
+shape = SubResource( 1 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="arma2" type="Sprite" parent="Area2D2"]
+position = Vector2( 755, 103 )
+scale = Vector2( 0.674632, 0.465333 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 754, 106.087 )
+scale = Vector2( 0.674632, 0.465333 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2( 755, 103 )
+scale = Vector2( 0.674632, 0.465333 )
+
+[node name="Sprite2" type="Sprite" parent="Area2D3"]
+position = Vector2( 576.611, 1119.63 )
+scale = Vector2( 0.647579, 1.0745 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 573.646, 1125.54 )
+scale = Vector2( 0.647579, 1.0745 )
+shape = SubResource( 4 )
+
+[node name="Area2D4" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Area2D4"]
+position = Vector2( 358.5, 300.625 )
+scale = Vector2( 0.439535, 0.416667 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( 355.5, 300 )
+shape = SubResource( 5 )
+
+[node name="Area2D5" type="Area2D" parent="."]
+
+[node name="flor" type="Sprite" parent="Area2D5"]
+position = Vector2( 169, 526 )
+scale = Vector2( 0.559859, 0.623595 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2( 168.5, 523.5 )
+shape = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -22, 2 )
+polygon = PoolVector2Array( 22, 6, 19, 829, 7, 836, 8, 756, 10, 656, 5, 10 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -22, -18 )
+scale = Vector2( 0.998649, 1.10547 )
+polygon = PoolVector2Array( 35, 4, 1353.3, 13.0346, 1356.3, 24.7943, 29, 17 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 1356, 35 )
+polygon = PoolVector2Array( -1, 1, -8, -12, -3, 184, 91, 222, 211, 225, 208, -17, 0, -15 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 1561, 276 )
+polygon = PoolVector2Array( -4, -2, -4, 534, -7, 544, -20, 533, -30, -15 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 27, 823 )
+polygon = PoolVector2Array( 3, -2, 1527, -2, 1508, -21, -7, -13 )
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_entered" from="Area2D2" to="." method="_on_Area2D2_body_shape_entered"]
+[connection signal="body_shape_entered" from="Area2D3" to="." method="_on_Area2D3_body_shape_entered"]
+[connection signal="body_shape_entered" from="Area2D4" to="." method="_on_Area2D4_body_shape_entered"]
+[connection signal="body_shape_entered" from="Area2D5" to="." method="_on_Area2D5_body_shape_entered"]
